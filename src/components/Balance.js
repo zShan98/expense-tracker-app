@@ -5,7 +5,7 @@ export const Balance = ()=>{
     const {transaction} = getContext();
     let balance = 0;
     
-    transaction.array.forEach(element => {
+    transaction.forEach(element => {
         balance += element
     });
 
