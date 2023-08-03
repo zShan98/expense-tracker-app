@@ -8,6 +8,21 @@ body{
   margin: auto;
 }
 
+@media all and (max-width: 768px){
+
+  body{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 540px){
+
+  body{
+    width: 100%;
+    margin: auto;
+  }
+}
 /* div {
   border: 1px solid black;
 } */
