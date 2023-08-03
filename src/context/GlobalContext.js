@@ -27,4 +27,4 @@ return (
 
 }
 
-export const getContext = ()=> useContext(MyContext)
+export const GetContext = ()=> useContext(MyContext)

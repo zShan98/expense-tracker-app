@@ -1,12 +1,12 @@
-import { getContext } from "../context/GlobalContext"
+import { GetContext } from "../context/GlobalContext"
 
 export const Balance = ()=>{
 
-    const {transaction} = getContext();
+    const {transaction} = GetContext();
     let balance = 0;
     
     transaction.forEach(element => {
-        balance += element
+        balance += element.amount;
     });
 
 

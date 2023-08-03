@@ -1,8 +1,8 @@
-import { getContext } from "../context/GlobalContext"
+import { GetContext } from "../context/GlobalContext"
 
 export const TransactionList = ()=>{
 
-    const {deleteTransaction, transaction} = getContext()
+    const {deleteTransaction, transaction} = GetContext()
 
     return(
         <div className="transactionList">

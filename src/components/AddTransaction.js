@@ -1,11 +1,11 @@
 import {useState, useRef} from 'react';
-import {getContext } from '../context/GlobalContext';
+import {GetContext } from '../context/GlobalContext';
 
 export const AddTransaction = ()=>{
 
 
 const [transaction, setTransaction] = useState({id: 0, text:"", amount:0.00});
-const {addTransaction} = getContext()
+const {addTransaction} = GetContext()
 
 const handleClick = (e)=>{
     

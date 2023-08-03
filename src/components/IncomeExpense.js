@@ -1,9 +1,9 @@
-import { getContext } from "../context/GlobalContext"
+import { GetContext } from "../context/GlobalContext"
 
 export const IncomeExpense = ()=>{
     let income = 0.00
     let expense =0.00
-    const {transaction} = getContext();
+    const {transaction} = GetContext();
 
     for(let x=0; x<transaction.length; x++){
         if(transaction[x].amount >= 0)
