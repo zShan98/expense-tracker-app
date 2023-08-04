@@ -26,7 +26,7 @@ jobs:
     #   run: cd ./build          
       
     - name: deploy with surge      
-      run: surge ./ expense-tracker-sza.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./ expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
 
       
       
