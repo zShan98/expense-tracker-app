@@ -38,7 +38,7 @@ return(
             <div className='item'>
                 <label id="amount" ><b>Amount: </b></label><br />
                 <p>( negative - expense, positive - income )</p>
-                <input type="number" htmlFor="amount" placeholder=" Enter amount..." ref={amountRef}onChange={(e)=> setTransaction({id: transaction.id, text:transaction.text, amount:e.target.value})}/>
+                <input type="number" htmlFor="amount" min={Number.NEGATIVE_INFINITY} max={Number.POSITIVE_INFINITY} placeholder=" Enter amount..." ref={amountRef}onChange={(e)=> setTransaction({id: transaction.id, text:transaction.text, amount:e.target.value})}/>
             </div>
             <button type="submit" className="s-btn" onClick={handleClick}>Add Transaction</button>
         </form>
