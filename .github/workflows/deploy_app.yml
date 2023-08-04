@@ -19,10 +19,12 @@ jobs:
         node-version: 12
     - name: Install Surge
       run: npm install -g surge
-    - name: build react app
-      run: npm run build
-    - name: change directory to /build
-      run: cd ./build           
+      
+    # - name: build react app
+    #   run: npm run build
+    # - name: change directory to /build
+    #   run: cd ./build          
+      
     - name: deploy with surge      
       run: surge ./ expense-tracker-sza.sh --token ${{secrets.SURGE_TOKEN}}
 
