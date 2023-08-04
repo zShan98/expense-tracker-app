@@ -14,7 +14,7 @@ export const GlobalContext = ({children})=>{
     }
 
     function deleteTransaction(delId){
-        transactionList = transactionList.filter((trans)=> trans.id != delId);
+        transactionList = transactionList.filter((trans)=> trans.id !== delId);
         setTransaction(transactionList)
     }
 
