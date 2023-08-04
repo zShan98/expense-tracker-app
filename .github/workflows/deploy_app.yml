@@ -23,8 +23,10 @@ jobs:
       run: npm install
     - name: build react app
       run: npm run build
+    - name: change directory to /build
+      run: cd ./build
     - name: deploy with surge      
-      run: surge ./build expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./ expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
 
       
       
