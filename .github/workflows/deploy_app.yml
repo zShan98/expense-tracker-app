@@ -14,15 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Nodejs
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v2-beta ./
       with:
         node-version: 12
     - name: Install Surge
       run: npm install -g surge
-      
+    - name: Install required packages
+      run: npm install
     - name: build react app
       run: npm run build
-      
     - name: deploy with surge      
       run: surge ./build/ expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
 
