@@ -25,6 +25,7 @@ jobs:
       run: npm run build
     - name: change directory to /build
       run: cd ./build
+      run: ls
     - name: deploy with surge      
       run: surge ./ expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
 
