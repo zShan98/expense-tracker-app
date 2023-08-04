@@ -17,14 +17,14 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    - name: Install Surge
-      run: npm install -g surge
-    - name: Install required packages
+    - name: Install packages for react
       run: npm install
     - name: build react app
       run: npm run build
+    - name: Install Surge
+      run: npm install -g surge      
     - name: deploy with surge      
-      run: surge ./build expense-tracker-sza.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build expense-tracker-sza.sh --token ${{secrets.SURGE_TOKEN}}
 
       
       
